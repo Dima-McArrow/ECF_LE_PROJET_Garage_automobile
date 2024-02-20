@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Garage V. Parrot - Services</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./bootstrap/css/bootstrap.css"
+    />
+    <link rel="stylesheet" href="./charte_graph/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-expand-lg justify-content-center main_color_dark nav_font m-auto"
+      >
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-uppercase accueil" href="index.html"
+              >Accueil</a
+            >
+          </li>
+          <li class="nav-item">
+            <a id="active_now" class="nav-link text-uppercase" aria-current="page" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-uppercase" href="used_cars.html">Voitures d'occasion</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-uppercase" href="contact.html">Contactez-nous</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="mb-5">
+        <h1 class="h1 text-center mt-5 mb-2 main_title">Nos Services</h1>
+        <div class="container">
+          <hr>
+          <div class="mb-5">
+            <p class="text-center service_card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, sed quas animi expedita, pariatur dolores officia error minus architecto cupiditate, ipsam mollitia temporibus nemo adipisci quos illum? Eum, tempore doloremque.</p>
+          </div>
+          <div id="services" class="row d-flex gap-3 justify-content-center">
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container-fluid main_color_dark">
+        <div class="row justify-content-center mt-5">
+          <div class="col-11 col-sm-3 mt-5" id="openingHours">
+            <ul id="opening_hours" class="card_body_font">
+            </ul>
+          </div>
+          <div class="col-8 col-sm-3 mt-5">
+            <p class="nav_font text-center">Contactez-nous</p>
+            <div class="text-center text-light nav_font mt-3 mb-4">
+              <a style="text-decoration: none; color:#f2f2f2" class="card_body_font tel" href="tel:+33768732599">
+                <img src="./img/tel.svg" alt="">07 68 73 25 99</a>
+            </div>
+            <div class="text-center card_body_font mb-3 mt-2">
+              <a style="color: #d94350; text-decoration: none;" class="card_body_font tel" href="contact.html">
+                Notre formulaire de contact</a>
+            </div>
+          </div>
+          <div class="col-8 col-sm-3 mt-5">
+            <p class="nav_font text-center mb-3">Notre adresse</p>
+            <p class="text-light card_body_font text-center">1 rue des Lilas d'Espagne</p>
+            <p class="text-light card_body_font text-center">92400</p>
+            <p class="text-light card_body_font text-center">Courbevoie</p>
+            <div class="text-center card_body_font mb-3">
+              <a style="color: #d94350; text-decoration: none;" href="https://www.google.com/maps/place/1+Rue+des+Lilas+d'Espagne,+92400+Courbevoie/@48.8972106,2.2312012,17z/data=!3m1!4b1!4m6!3m5!1s0x47e6650023226b03:0x301bbe93f8b25661!8m2!3d48.8972072!4d2.2360721!16s%2Fg%2F11bw4n596w?entry=ttu" target="_blank">
+                Vor sur Google Maps
+              </a>
+            </div>
+          </div>
+        </div>
+        <hr style="color: #f2f2f2" />
+        <div class="row">
+          <div class="col text-center">
+            <p class="text-light mt-1 mb-5 nav_font mt-3">
+              &copy; 2024 <span class="logo_footer">Garage V. Parrot</span>.
+              Tous droits réservés.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="fetch_services.js"></script>
+    <script src="opening_hours.js"></script>
+  </body>
+</html>

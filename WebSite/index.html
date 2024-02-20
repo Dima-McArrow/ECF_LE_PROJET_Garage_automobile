@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Garage V. Parrot</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./bootstrap/css/bootstrap.css"
+    />
+    <link rel="stylesheet" href="./charte_graph/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-expand-lg justify-content-center main_color_dark nav_font m-auto"
+      >
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a
+              id="active_now"
+              class="nav-link text-uppercase accueil"
+              aria-current="page"
+              href="index.html"
+              >Accueil</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-uppercase" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-uppercase" href="used_cars.html"
+              >Voitures d'occasion</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-uppercase" href="contact.html"
+              >Contactez-nous</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <img
+        class="main_logo mx-auto d-block mt-5"
+        src="https://car-garage-bucket.s3.eu-west-3.amazonaws.com/logo.png"
+        alt="logo Garage V. Parrot"
+      />
+      <h1 class="h1 text-center mt-2 mb-2 main_title-main_page">Garage V. Parrot</h1>
+    </header>
+    <main>
+      <div class="container">
+        <section>
+          <div class="row">
+            <div class="col">
+              <h2 class="h2 text-center text-uppercase mb-5 font_barlow-main_page since">Depuis 2021</h2>
+              <hr>
+              <p class="mb-3 text-center font_barlow">
+                <span class="the_man"><i>Vincent Parrot</i></span>, fort de ses 15 années d'expérience dans
+                la réparation automobile, a ouvert son propre garage à
+                <span class="uppercase since"><b>Toulouse</b></span> en <span class="since"><b>2021</b></span>.
+              </p>
+              <p class="mb-5 text-center font_barlow">
+                Depuis 2 ans, il propose une large gamme de services: réparation
+                de la carrosserie et de la mécanique des voitures ainsi que leur
+                entretien régulier pour garantir leur performance et leur
+                sécurité.<br/> De plus, le <span class="the_man"><strong>Garage V. Parrot</strong></span> met en
+                vente des véhicules d'occasion.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="container-fluid img-fluid">
+        <div class="row">
+          <div class="col">
+            <img
+              class="img_main mb-5 shadow"
+              src="https://car-garage-bucket.s3.eu-west-3.amazonaws.com/garage.jpg"
+              alt="main picture"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <section>
+          <div class="row">
+            <div class="col">
+              <p class="mb-5 text-center font_barlow">
+                <span class="the_man"><i>Vincent Parrot</i></span> considère son atelier comme un véritable
+                lieu de confiance pour ses clients et leurs voitures doivent,
+                selon lui, à tout prix être entre de
+                <span class="since"><strong>bonnes mains</strong></span>.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="container">
+        <section id="revues">
+          <div class="row mt-5 mb-5">
+            <div id="revues">
+              <h2 class="text-center text-uppercase mb-5 font_barlow barlow_title">Les commentaires de nos clients</h2>
+              <div class="row" id="testimonialCards"></div>
+            </div>
+        </div>
+        <!-- Testimonial Submission Form -->
+        <div class="row my-5">
+            <div id="submit-testimonial">
+                <h2 class="h2 text-center text-uppercase mb-5 font_barlow barlow_title">Lessez-nous votre commentaire</h2>
+                <form id="testimonialForm" class="row g-3 card_body_font needs-validation" novalidate>
+                  <div class="col-md-6">
+                    <label for="name" class="form-label">Nom et prénom</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Doe John" required>
+                    <div class="valid-feedback">
+                      Ok!
+                    </div>
+                    <div class="invalid-feedback">
+                      Veuillez renseigner votre nom SVP
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="rating" class="form-label">Votre évaluation</label>
+                    <select class="form-select" id="rating" name="rating" required>
+                      <option value="">Faitez votre choix...</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                    <div class="valid-feedback">
+                      Ok!
+                    </div>
+                    <div class="invalid-feedback">
+                      Choisissez vontre note (évaluation) SVP
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <label for="comment" class="form-label">Votre commentaire</label>
+                    <textarea class="form-control" id="comment" name="comment" rows="3" required></textarea>
+                    <div class="valid-feedback">
+                      Ok!
+                    </div>
+                    <div class="invalid-feedback">
+                      Si vous voulez lesser un commentaire, vous devez l'écrire...
+                    </div>
+                  </div>
+                  <div class="col-12 text-center">
+                    <button type="submit" class="btn btn_primary">Envoyer</button>
+                  </div>
+                </form>
+            </div>
+        </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="container-fluid main_color_dark">
+        <div class="row justify-content-center mt-5">
+          <div class="col-11 col-sm-3 mt-5" id="openingHours">
+            <ul id="opening_hours" class="card_body_font">
+            </ul>
+          </div>
+          <div class="col-8 col-sm-3 mt-5">
+            <p class="nav_font text-center">Contactez-nous</p>
+            <div class="text-center text-light nav_font mt-3 mb-4">
+              <a style="text-decoration: none; color:#f2f2f2" class="card_body_font tel" href="tel:+33768732599">
+                <img src="./img/tel.svg" alt="tel:">07 68 73 25 99</a>
+            </div>
+            <div class="text-center card_body_font mb-3 mt-2">
+              <a style="color: #d94350; text-decoration: none;" class="card_body_font tel" href="contact.html">
+                Notre formulaire de contact</a>
+            </div>
+          </div>
+          <div class="col-8 col-sm-3 mt-5">
+            <p class="nav_font text-center mb-3">Notre adresse</p>
+            <p class="text-light card_body_font text-center">1 rue des Lilas d'Espagne</p>
+            <p class="text-light card_body_font text-center">92400</p>
+            <p class="text-light card_body_font text-center">Courbevoie</p>
+            <div class="text-center card_body_font mb-3">
+              <a style="color: #d94350; text-decoration: none;" href="https://www.google.com/maps/place/1+Rue+des+Lilas+d'Espagne,+92400+Courbevoie/@48.8972106,2.2312012,17z/data=!3m1!4b1!4m6!3m5!1s0x47e6650023226b03:0x301bbe93f8b25661!8m2!3d48.8972072!4d2.2360721!16s%2Fg%2F11bw4n596w?entry=ttu" target="_blank">
+                Vor sur Google Maps
+              </a>
+            </div>
+          </div>
+        </div>
+        <hr style="color: #f2f2f2" />
+        <div class="row">
+          <div class="col text-center">
+            <p class="text-light mt-1 mb-5 nav_font mt-3">
+              &copy; 2024 <span class="logo_footer">Garage V. Parrot</span>.
+              Tous droits réservés.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      (() => {
+        'use strict'
+      
+        // Récupérez tous les formulaires auxquels j'applique les styles de validation Bootstrap personnalisés
+        const forms = document.querySelectorAll('.needs-validation')
+      
+        // Faites une boucle sur eux et empêchez la soumission
+        Array.from(forms).forEach(form => {
+          form.addEventListener('submit', event => {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+      
+            form.classList.add('was-validated')
+          }, false)
+        })
+      })()
+    </script>
+    <script src="get_set_testimonials.js"></script>
+    <script src="opening_hours.js"></script>
+  </body>
+</html>
