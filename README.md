@@ -43,3 +43,47 @@ site: [CMS du site Garage V. Parrot](https://cryptic-island-77465-7670ca5f9230.h
 
 * Plant UML
 * DBML (Database Markup Language)
+
+
+### Manuel d'utilisation :
+
+#### Premiere connexion :
+
+Lors de la première connexion sur le Système de Gestion du Contenu il faut rentrer : 
+
+* le mail : admin@admin.com
+
+* le mot de passe : admin
+
+Puis, dans le menu (sur la page) de gestion des utilisateurs il faut créer un utilisateur admin de votre choix et supprimer l’admin default.
+
+
+#### Utilisation du “dashboard” : 
+
+###### L'admin a accès au fonctionnalités suivantes : 
+
+* Gestion d’utilisateurs 
+
+* Gestion des voitures d’occasion 
+
+* Gestion des messages 
+
+* Gestion des services 
+
+* Gestion des commentaires 
+
+* Gestion d’horaires d’ouverture 
+
+###### L'employé a accès au fonctionnalités suivantes : 
+
+* Gestion des voitures d’occasion 
+
+* Gestion des messages 
+
+* Gestion des commentaires 
+
+#### La gestion des horaires d’ouverture :
+
+* pour ouvrir un jour donné il faut: choisir “<span style="color:green">ouvrir</span>” pour la journée, choisir “<span style="color:green">ouvrir</span>” pour le matin, le soir ou les deux, puis sauvegarder les modifications. Après cette étape, vous pouvez choisir les heures. 
+
+* Pour <span style="color:red">fermer</span>: <span style="color:red">fermer</span> les deux horaires – matin et soir, <span style="color:red">fermer</span> la journée, sauvegarder.
