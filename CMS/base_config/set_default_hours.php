@@ -1,5 +1,5 @@
 <?php
-require_once '../db_config.php';
+require_once '../app_configs/db_config.php';
 
 
 $query = "SELECT * FROM garage_app.opening_hours";

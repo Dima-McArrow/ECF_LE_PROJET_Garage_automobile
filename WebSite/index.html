@@ -206,26 +206,6 @@
         </div>
       </div>
     </footer>
-    <script>
-      (() => {
-        'use strict'
-      
-        // Récupérez tous les formulaires auxquels j'applique les styles de validation Bootstrap personnalisés
-        const forms = document.querySelectorAll('.needs-validation')
-      
-        // Faites une boucle sur eux et empêchez la soumission
-        Array.from(forms).forEach(form => {
-          form.addEventListener('submit', event => {
-            if (!form.checkValidity()) {
-              event.preventDefault()
-              event.stopPropagation()
-            }
-      
-            form.classList.add('was-validated')
-          }, false)
-        })
-      })()
-    </script>
     <script src="get_set_testimonials.js"></script>
     <script src="opening_hours.js"></script>
   </body>

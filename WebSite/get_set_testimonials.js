@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Récupération initiale des commentaires
   fetchTestimonials();
   
-  // Configurez un intervalle pour récupérer des témoignages toutes les 60 000 millisecondes (60 secondes)
+  // Configurer un intervalle pour récupérer des témoignages toutes les 60 000 millisecondes (60 secondes)
   setInterval(fetchTestimonials, 60000);
 
   function fetchTestimonials() {
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (!form.checkValidity()) {
       e.stopPropagation();
       form.classList.add('was-validated');
-      return; // Arrêtez la soumission du formulaire si la validation échoue
+      return; // Arrêter la soumission du formulaire si la validation échoue
     }
     
     // Procéder à la soumission du formulaire si la validation réussit
@@ -51,9 +51,9 @@ document.addEventListener("DOMContentLoaded", function() {
     .then(data => {
       if(data.success) {
         alert('✔️ Commentaire soumis avec succès!');
-        form.reset(); // Réinitialiser les champs du formulaire
+        form.reset();
         form.classList.remove('was-validated');
-        // Récupère automatiquement les commentaires en raison de la configuration de l'intervalle.
+        
       } else if(data.error) {
         alert('Échec de la soumission: ' + data.error);
       }
