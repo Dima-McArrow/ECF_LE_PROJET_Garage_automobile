@@ -2,27 +2,27 @@ document.addEventListener("DOMContentLoaded", function () {
   // Fonction pour récupérer et afficher les voitures en fonction des filtres actuels
   function fetchAndDisplayCars() {
     // Construire la chaîne de requête à partir des valeurs du formulaire de filtre
-    const formData = new FormData(document.getElementById("filterForm"));
-    const searchParams = new URLSearchParams(formData).toString();
+    const formData = new FormData(document.getElementById("filterForm"))
+    const searchParams = new URLSearchParams(formData).toString()
 
     fetch(`get_cars.php?${searchParams}`)
       .then((response) => {
         if (!response.ok) {
-          throw new Error("Network response was not ok: " + response.statusText);
+          throw new Error("Network response was not ok: " + response.statusText)
         }
-        return response.json();
+        return response.json()
       })
       .then((data) => {
-        const carsContainer = document.getElementById("cars");
-        carsContainer.classList.add("container");
+        const carsContainer = document.getElementById("cars")
+        carsContainer.classList.add("container")
 
         // Effacer le contenu existant et préparer une nouvelle ligne
-        carsContainer.innerHTML = '<div class="row"></div>';
-        const row = carsContainer.querySelector(".row");
+        carsContainer.innerHTML = '<div class="row"></div>'
+        const row = carsContainer.querySelector(".row")
 
         if (data.length === 0) {
-          row.innerHTML = "<p>No cars found.</p>";
-          return;
+          row.innerHTML = "<p>No cars found.</p>"
+          return
         }
 
         // Générer et ajouter du HTML pour chaque voiture
@@ -42,26 +42,26 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
               </div>
             </div>
-          `;
-          row.innerHTML += carHtml;
-        });
+          `
+          row.innerHTML += carHtml
+        })
       })
-      .catch((error) => console.error("Error fetching cars:", error.message));
+      .catch((error) => console.error("Error fetching cars:", error.message))
   }
 
-  fetchAndDisplayCars();
+  fetchAndDisplayCars()
 
-  setInterval(fetchAndDisplayCars, 60000);
+  setInterval(fetchAndDisplayCars, 60000)
 
   document.getElementById("applyFilters").addEventListener("click", function (event) {
-    event.preventDefault();
-    fetchAndDisplayCars();
-  });
+    event.preventDefault()
+    fetchAndDisplayCars()
+  })
 
   document.getElementById("resetFilters").addEventListener("click", function () {
     // Réinitialise le formulaire. Cette ligne est facultative si le type de bouton est "reset" et peut être supprimée.
-    document.getElementById("filterForm").reset();
+    document.getElementById("filterForm").reset()
     
-    fetchAndDisplayCars();
-  });
-});
+    fetchAndDisplayCars()
+  })
+})

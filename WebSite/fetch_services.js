@@ -4,8 +4,9 @@ document.addEventListener("DOMContentLoaded", function() {
     fetch('get_services.php')
       .then(response => response.json())
       .then(services => {
-        const servicesContainer = document.getElementById('services');
-        let cardsHtml = '';
+        const servicesContainer = document.getElementById('services')
+        let cardsHtml = ''
+        console.log(typeof(services))
         services.forEach(service => {
           cardsHtml += `
             <div class="card mt-1 mb-3" style="width: 18rem;">
@@ -14,18 +15,18 @@ document.addEventListener("DOMContentLoaded", function() {
                 <p class="card-text my_card-body">${service.description}</p>
               </div>
             </div>
-          `;
-        });
+          `
+        })
 
-        servicesContainer.innerHTML = cardsHtml;
+        servicesContainer.innerHTML = cardsHtml
       })
-      .catch(error => console.error('Error fetching services:', error));
+      .catch(error => console.error('Error fetching services:', error))
   }
 
   // Récupérer et afficher les services immédiatement
-  fetchAndDisplayServices();
+  fetchAndDisplayServices()
 
   // Configurez l'intervalle pour récupérer et afficher automatiquement les services toutes les 30 minutes
   // 1800000 millisecondes = 30 minutes
-  setInterval(fetchAndDisplayServices, 1800000);
-});
+  setInterval(fetchAndDisplayServices, 1800000)
+})
